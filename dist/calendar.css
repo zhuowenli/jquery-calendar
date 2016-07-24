@@ -1,0 +1,291 @@
+.calender {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    /*padding: 12px;*/
+    background: #e2e2e2;
+}
+.calender .cal_banner {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #FFF;
+    margin: auto;
+}
+.calender .cal_banner a.btn-back {
+    position: absolute;
+    left: 5px;
+    width: 35px;
+    height: 100%;
+    background: url(../images/cal_btn-back.png) no-repeat center;
+}
+.calender .cal_banner .caption {
+    position: relative;
+    margin: 0 auto;
+    width: 190px;
+    height: 100%;
+}
+.calender .cal_banner .caption p {
+    display: block;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    color: #f2641c;
+    font-size: 16px;
+    font-weight: block;
+}
+.calender .cal_banner .caption span {
+    display: inline-block;
+    margin-top: 11px;
+    color: #3498db;
+}
+.calender .cal_banner .caption a {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 40px;
+    z-index: 999;
+}
+.calender .cal_banner .caption a.btn-pre {
+    left: 0;
+    background: url(../images/cal_btn-pre-month1.png) no-repeat center 12px;
+}
+.calender .cal_banner .caption a.btn-next {
+    right: 0;
+    background: url(../images/cal_btn-next-month1.png) no-repeat center 10px;
+}
+.calender ul, li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+.calender ul.cal_title {
+    position: relative;
+    overflow: hidden;
+    height: 25px;
+    line-height: 25px;
+    margin: auto;
+}
+.calender ul.cal_title li {
+    float: left;
+    width: 14.285714%;
+}
+.calender ul.cal_title li div {
+    text-align: center;
+    font-size: 110%;
+    padding-top: 1px;
+    border-left: 1px solid #F4F4F4;
+    border-right: 1px solid #F4F4F4;
+    background-color: #F4F4F4;
+}
+.calender ul.cal_title li:nth-child(1) div {
+    border-left: 1px solid #E2E2E2;
+}
+.calender ul.cal_title li:nth-child(7) div {
+    border-right: 1px solid #E2E2E2;
+}
+.calender ul.cal_title li.blue {
+    color: #3397DB;
+}
+.calender ul.cal_dates {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+.calender ul.cal_dates li {
+    position: relative;
+    float: left;
+    width: 13.71%;
+    height: 52px;
+    text-align: center;
+    border:1px solid #e3e3e3;
+    background:#fff
+}
+.calender ul.cal_dates li a.cal {
+    display: block;
+    text-decoration: none;
+    height: 50px;
+    color: #5F6F80;
+    border: 1px solid #fff;
+    font-size: 120%;
+    line-height: 50px;
+}
+.calender ul.cal_dates li span.num {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    color: #b3bebe;
+    display: none;
+}
+.calender ul.cal_dates li span.price {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    color: #ed1c24;
+    display: none;
+}
+.calender ul.cal_dates li.fixed {
+    background: #27ae60;
+}
+.calender ul.cal_dates li.fixed a.cal {
+    color: #fff;
+}
+.calender ul.cal_dates li.fixed span.num {
+    color: #fff;
+}
+.calender ul.cal_dates li.fixed span.price {
+    color: #fff;
+}
+.calender ul.cal_dates li.disabled {
+    background: #c1c1c1;
+}
+.calender ul.cal_dates li.disabled a.cal {
+    color: #fff;
+}
+.calender ul.cal_dates li.disabled span.num {
+    color: #fff;
+}
+.calender ul.cal_dates li.disabled span.price {
+    color: #fff;
+}
+.calender ul.cal_dates li.passed {
+}
+.calender ul.cal_dates li.passed a.cal {
+    color: #c1c1c1;
+}
+.calender ul.cal_dates li a.active {
+    color: #3397DB;
+    border: 1px solid #3397DB;
+}
+
+.calender ul.cal_dates li.pre a {
+    color: #999;
+}
+.calender ul.cal_dates li.next a {
+    color: #999;
+}
+.calender .btns {
+    display: block;
+    overflow: hidden;
+    padding: 0 0 8px 0;
+    background: #e2e2e2;
+}
+.calender .btns a.btn {
+    display: block;
+    width: 75px;
+    height: 35px;
+    margin-top: 15px;
+    color: #FFF;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 35px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+.calender .btns a.btn-confirm {
+    float: left;
+    background-color: #F05A28;
+    margin-left: 5px;
+}
+.calender .btns a.btn-cancel {
+    float: right;
+    background-color: #8D9BAA;
+    margin-right: 5px;
+}
+.calender .btns a.btn-close {
+    float: right;
+    background-color: #8d9baa;
+    margin-right: 5px;
+}
+.calender .btns .tags {
+    float: left;
+    margin: 15px 0 0 5px;
+}
+.calender .btns .tags li {
+    float: left;
+    margin-right: 15px;
+}
+.calender .btns .tags li i {
+    float: left;
+    width: 12px;
+    height: 12px;
+    -webkit-box-shadow:0 0 5px #fff;
+    -moz-box-shadow:0 0 5px #fff;
+    box-shadow:0 0 5px #fff;
+    margin-top: 2px;
+}
+.calender .btns .tags li i.i1 {
+    background: #fff;
+}
+.calender .btns .tags li i.i2 {
+    background: #c1c1c1;
+}
+.calender .btns .tags li i.i3 {
+    background: #27ae60;
+}
+.calender .btns .tags li p {
+    float: left;
+    color: #7f8c8d;
+    font-size: 9pt;
+    margin: 2px 0 0 3px;
+}
+#cal_enter, #cal_leave {
+    display: none;
+    position: relative;
+    background: #e2e2e2;
+    z-index: 9999;
+}
+#cal_enter > div, #cal_leave > div {
+    /* margin-top: -3px; */
+    /*padding: 0 15px 15px 15px;*/
+    padding: 5px 5px 5px 5px;
+}
+#cal_enter > div.mask, #cal_leave > div.mask {
+    margin: 0;
+    padding: 0;
+    height: 3px;
+    -moz-box-shadow: 0px 3px 3px #ccc inset;
+    -webkit-box-shadow: 0px 3px 3px #ccc inset;
+    box-shadow: 0px 3px 3px #ccc inset;
+}
+.cal_banner .caption p {
+    line-height: 22px;
+}
+
+.room_num{ line-height:39px; background-color:#fff; text-align:center; color: #333; padding-bottom: 10px;border-bottom: 1px solid #eeeeee;}
+.room_num em{ font-style:normal;}
+.margin0_25{ margin:0 40px;}
+.calendar_con{ padding:14px 10px;margin-top:105px;}
+.calendar-month {margin-bottom: 10px;font-size: 12px;color: #333;background-color: #fff;overflow: hidden; border-radius:2px;}
+.calendar-title {position: relative;}
+.calendar-title h2 {padding: 10px 0 10px;font-size: 16px;text-align: center;}
+.calendar-week {position: relative;overflow: hidden;}
+.calendar-month li {float: left;width: 14%;padding: 0 1px;height: 40px;line-height: 40px;text-align: center;-webkit-box-sizing: border-box;box-sizing: border-box;}
+/*.calendar-month li:nth-child(7n + 1), .calendar-month li:nth-child(7n) {width: 15%;}*/
+.calendar-day {overflow: hidden; font-size:14px;}
+.calendar-day li {border-top: 1px solid #eee;}
+.calendar-month .old {color: #999;}
+.calendar-month .line2 {line-height:40px;}
+.calendar-month .line3{line-height:20px;}
+.calendar-month .cal_noRoom span {color: #999;background-color:#ddd; display:inline-block; width:99%; height:37px; margin-top: 1px; border-radius:3px;}
+.calendar-month .cal_select span {color: #fff;background-color:#F05B72; display:inline-block; width:99%; height:37px; line-height:38px;margin-top: 1px; border-radius:3px;}
+.calendar-month .line3 .icon_te{background-image: url(../images/icon_te.png);background-repeat: no-repeat;background-size: 12px 12px; display:inline-block; width:99%; height:37px; line-height:20px;margin-top: 1px; border-radius:3px;}
+.calendar-month .line3 em {display: block;line-height: 20px;}
+.calendar-month .cal_select em {color: #fff;line-height: 20px;}
+.div_fixed {left: 0;position: fixed;top: 0;width: 100%;z-index: 9999;}
+.calendar_top{padding: 10px;}
+.cal_te{text-align: center; color:#F05B72; line-height: 15px;}
+.icon_7{background:url(../images/icon_7_2.png) no-repeat center; background-size:12px 15px;width:12px; height: 15px;display: inline-block;margin-right: 8px; vertical-align: middle;}
+.icon_30{background:url(../images/icon_30_2.png) no-repeat center; background-size:12px 15px;width:12px; height: 15px;display: inline-block;margin-right: 8px; vertical-align: middle;}
+.icon_discount{background:url(../images/icon_zhe.png) no-repeat center; background-size:12px 15px;width:12px; height: 15px;display: inline-block;margin-right: 8px; vertical-align: middle;}
+.cal_tu{ padding: 10px;}
+.icon_cal_te{background:url(../images/icon_cal_te.png) no-repeat center; background-size:20px 19px;width:20px; height: 19px;display: inline-block;margin-right:10px; vertical-align: middle;}
+.icon_cal_no{background:url(../images/icon_cal_no.png) no-repeat center; background-size:20px 19px;width:20px; height: 19px;display: inline-block;margin-right:10px; vertical-align: middle;}
+.marginL25{margin-left: 25px;}
+.cal_price{font-size: 10px; color: #666;}
+.calendar-month .cal_noRoom .cal_price{font-size: 10px; color: #999;}
