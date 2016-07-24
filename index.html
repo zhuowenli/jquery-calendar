@@ -48,26 +48,15 @@
                 totalMohth: 12,
                 dayText: ['开始', '结束'],
                 checkDayChange: function(){
-                    console.log(this.dayText[0], this.checkIn ? this.checkIn.format('yyyy-MM-dd') : '-');
-                    console.log(this.dayText[1], this.checkOut ? this.checkOut.format('yyyy-MM-dd') : '-');
-
+                    console.log('--------------')
                     if (this.checkOut == null && this.checkOut == null) {
-                        $('#checkin-date').html('请选择');
-                        $('#checkout-date').html('请选择');
-                        $('#total-days').text('_');
+                        console.log('未选中')
                     }
                     if (this.checkIn ) {
-                        $('#checkin-date').html(this.checkIn.format('yyyy-MM-dd'));
-                        $('#checkout-date').html('请选择');
+                        console.log(this.dayText[0], this.checkIn.format('yyyy-MM-dd'));
                     }
                     if (this.checkOut ) {
-                        $('#checkout-date').html(this.checkOut.format('yyyy-MM-dd'));
-                    }
-                    $('#total-days').text('_');
-
-                    if (this.checkIn && this.checkOut) {
-                        var totalDays = parseInt(Math.abs((this.checkOut - this.checkIn) / 1000 / 60 / 60 /24));
-                        $('#total-days').text(' '+totalDays+' ');
+                        console.log(this.dayText[1], this.checkOut.format('yyyy-MM-dd'));
                     }
                 },
             });
