@@ -9,9 +9,64 @@
     <title>日期选择</title>
     <link rel="stylesheet" href="libs/normalize.css">
     <link rel="stylesheet" href="dist/calendar.css">
+    <style type="text/css">
+        .fixed{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        .room_num{
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            line-height: 40px;
+            background-color: #fff;
+            text-align: center;
+            color: #333;
+            border-bottom: 1px solid #eeeeee;
+        }
+        .room_num span{
+            font-size: 12px;
+            text-align: center;
+        }
+        .room_num span:not(.total){
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+        }
+        .room_num .total{
+            width: 7em;
+            color: #3cc51f;
+        }
+        .room_num em{
+            font-style: normal;
+        }
+        .calender{
+            padding-top: 40px;
+        }
+    </style>
 </head>
 <body>
-    <div id="calendar-box" class="calender"></div>
+    <div class="container">
+        <div class="fixed">
+            <div class="room_num">
+                <span>入住时间：<em id="checkin-date">请选择</em></span>
+                <span>离开时间：<em id="checkout-date">请选择</em></span>
+                <span class="total">共<em id="total-days">_</em>晚</span>
+            </div>
+        </div>
+        <div id="calendar-box" class="calender"></div>
+    </div>
+
     <script type="text/javascript" src="libs/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="dist/calendar.js"></script>
     <script type="text/javascript">
@@ -46,17 +101,28 @@
                 checkIn : null,
                 checkOut: null,
                 totalMohth: 12,
-                dayText: ['开始', '结束'],
+                dayText: ['入住', '离开'],
                 checkDayChange: function(){
-                    console.log('--------------')
+                    console.log(this.dayText[0], this.checkIn ? this.checkIn.format('yyyy-MM-dd') : '-');
+                    console.log(this.dayText[1], this.checkOut ? this.checkOut.format('yyyy-MM-dd') : '-');
+
                     if (this.checkOut == null && this.checkOut == null) {
-                        console.log('未选中')
+                        $('#checkin-date').html('请选择');
+                        $('#checkout-date').html('请选择');
+                        $('#total-days').text('_');
                     }
                     if (this.checkIn ) {
-                        console.log(this.dayText[0], this.checkIn.format('yyyy-MM-dd'));
+                        $('#checkin-date').html(this.checkIn.format('yyyy-MM-dd'));
+                        $('#checkout-date').html('请选择');
                     }
                     if (this.checkOut ) {
-                        console.log(this.dayText[1], this.checkOut.format('yyyy-MM-dd'));
+                        $('#checkout-date').html(this.checkOut.format('yyyy-MM-dd'));
+                    }
+                    $('#total-days').text('_');
+
+                    if (this.checkIn && this.checkOut) {
+                        var totalDays = parseInt(Math.abs((this.checkOut - this.checkIn) / 1000 / 60 / 60 /24));
+                        $('#total-days').text(' '+totalDays+' ');
                     }
                 },
             });

@@ -234,33 +234,7 @@
     font-size: 9pt;
     margin: 2px 0 0 3px;
 }
-#cal_enter, #cal_leave {
-    display: none;
-    position: relative;
-    background: #e2e2e2;
-    z-index: 9999;
-}
-#cal_enter > div, #cal_leave > div {
-    /* margin-top: -3px; */
-    /*padding: 0 15px 15px 15px;*/
-    padding: 5px 5px 5px 5px;
-}
-#cal_enter > div.mask, #cal_leave > div.mask {
-    margin: 0;
-    padding: 0;
-    height: 3px;
-    -moz-box-shadow: 0px 3px 3px #ccc inset;
-    -webkit-box-shadow: 0px 3px 3px #ccc inset;
-    box-shadow: 0px 3px 3px #ccc inset;
-}
-.cal_banner .caption p {
-    line-height: 22px;
-}
 
-.room_num{ line-height:39px; background-color:#fff; text-align:center; color: #333; padding-bottom: 10px;border-bottom: 1px solid #eeeeee;}
-.room_num em{ font-style:normal;}
-.margin0_25{ margin:0 40px;}
-.calendar_con{ padding:14px 10px;margin-top:105px;}
 .calendar-month {margin-bottom: 10px;font-size: 12px;color: #333;background-color: #fff;overflow: hidden; border-radius:2px;}
 .calendar-title {position: relative;}
 .calendar-title h2 {padding: 10px 0 10px;font-size: 16px;text-align: center;}
@@ -273,7 +247,7 @@
 .calendar-month .line2 {line-height:40px;}
 .calendar-month .line3{line-height:20px;}
 .calendar-month .cal_noRoom span {color: #999;background-color:#ddd; display:inline-block; width:99%; height:37px; margin-top: 1px; border-radius:3px;}
-.calendar-month .cal_select span {color: #fff;background-color:#F05B72; display:inline-block; width:99%; height:37px; line-height:38px;margin-top: 1px; border-radius:3px;}
+.calendar-month .cal_select span {color: #fff;background-color:#3cc51f; display:inline-block; width:99%; height:37px; line-height:38px;margin-top: 1px; border-radius:3px;}
 .calendar-month .line3 .icon_te{background-image: url(../images/icon_te.png);background-repeat: no-repeat;background-size: 12px 12px; display:inline-block; width:99%; height:37px; line-height:20px;margin-top: 1px; border-radius:3px;}
 .calendar-month .line3 em {display: block;line-height: 20px;}
 .calendar-month .cal_select em {color: #fff;line-height: 20px;}

@@ -44,7 +44,7 @@
 
         this.fillDayInfo = options.fillDayInfo || null;
         this.getDayInfo  = options.getDayInfo || null;
-        this.dayText     = options.dayText || ['入住', '离开'];
+        this.dayText     = options.dayText || ['开始', '结束'];
 
         this.checkState = 0;
         this.doColor = false;
@@ -132,9 +132,8 @@
         var isToday = this.getYmd(writeDay) == this.getYmd(this.today) ? 1 : 0;
         var dayText = isToday ? '今天' : day.d;
         if (writeDay < this.today) old = this.classDayPass;
-        if (    (this.checkIn && writeDay <= this.checkOut && writeDay > this.checkIn) ||
-                (this.checkOut && this.getYmd(writeDay) == this.getYmd(this.checkOut))
-            ) {
+        if ((this.checkIn && writeDay <= this.checkOut && writeDay > this.checkIn) ||
+            (this.checkOut && this.getYmd(writeDay) == this.getYmd(this.checkOut))) {
             checkDay = this.classDaySelect + ' ' + this.checkedday;
         }
         if (this.checkIn && this.getYmd(writeDay) == this.getYmd(this.checkIn)) dayText = this.dayText[0];
