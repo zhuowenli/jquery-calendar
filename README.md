@@ -4,5 +4,5 @@
 
 在线预览：[https://zhuowenli.github.io/jquery-calendar/](https://zhuowenli.github.io/jquery-calendar/)
 
-![](img/mobile.jpg);
+![](img/mobile.jpg)
 
