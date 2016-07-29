@@ -6,3 +6,20 @@
 
 ![](img/mobile.jpg)
 
+## Usage
+
+```html
+<div id="calendar-box" class="calendar"></div>
+```
+
+```js
+$('#calendar-box').calendar({
+    checkIn : null, // Date, 开始时间
+    checkOut: null, // Date, 结束时间
+    totalMohth: 12, // Number, 可选月份长度
+    dayText: ['入住', '离开'], // Array, 选中标识
+    checkDayChange: function(){
+        // callback
+    }
+});
+```
